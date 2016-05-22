@@ -1,0 +1,81 @@
+/**
+*
+* Page width constrain. Set the max and minimum width and use `@extend %constrain` to constrain the width.
+*
+**/
+
+$layout-max-width: 1280px;
+$grid-max-width: 1150px;
+$grid-item-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+
+%constrain {
+    max-width: $layout-max-width;
+    margin: 0 auto;
+}
+
+body {
+    margin: 0 !important;
+    @include font-size(18);
+    @include line-height(25);
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    // -webkit-font-smoothing: subpixel-antialiased;
+
+    font-family: $font-primary;
+    font-weight: $font-weight-normal;
+
+    p {
+        color: $colour-white;
+    }
+
+    @include media('>=desktop') {
+        height: 100%;
+    }
+}
+
+::selection {
+  background: $colour-brightblue;
+  color: #fff; 
+}
+
+h1, h2, h3 {
+    font-weight: $font-weight-normal;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: $layout-max-width;
+    width: 100%;
+}
+
+
+// .title {
+//     @include font-size(33);
+//     @include line-height(40);
+
+//     @include media('>=tablet') {
+//         @include font-size(46);
+//         @include line-height(54);
+//     }
+// }
+
+// .body-copy {
+//     @include line-height(30);
+//     a {
+//         color: $colour-black;
+//         text-decoration: none;
+//         transition: color 0.5s ease;
+//     }
+//     a:hover {
+//         color: $colour-green;
+//     }
+//     a:visited {
+//         color: #BB72D9;
+//         text-decoration: underline;
+//     }
+// }
