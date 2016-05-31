@@ -4,11 +4,11 @@
 *
 **/
 
-$font-oswald: 'Oswald', sans-serif;
-$font-merriweather: 'Merriweather', serif;
+$font-lora:'Lora', serif;
+$font-source-sans-pro: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-$font-primary: $font-merriweather;
-$header-font: $font-oswald;
+$font-primary: $font-lora;
+$font-title: $font-source-sans-pro;
 
 $font-weight-light: 300;
 $font-weight-normal: 400;

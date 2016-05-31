@@ -1,6 +1,43 @@
 .about {
-	background-color: $colour-navy;
+	background-color: $colour-pink;
+	font-size: 0;
+}
 
-	/* Remove once content added */
-	height: 400px;
+.about__brief {
+	display: inline-block;
+	width: 50%;
+	vertical-align: middle;
+    color: $colour-white;
+    padding: $general-section-padding;
+}
+
+.about__bio {
+	display: inline-block;
+	width: 50%;
+	vertical-align: middle;
+	background-color: $colour-white;
+    color: $colour-black;
+    padding: $general-section-padding;
+}
+
+.about__keypoints {
+	text-align: right;
+}
+
+.about__keypoint {
+	@include font-size(23);
+    @include line-height(22);
+    margin-bottom: $vertical-rhythm;
+    font-family: $font-title;
+}
+
+.about__intro {
+	@include font-size(16);
+    @include line-height(19);
+	margin-bottom: $vertical-rhythm;
+}
+
+.about__cta {
+	color: $colour-navy;
+	text-decoration: none;
 }
