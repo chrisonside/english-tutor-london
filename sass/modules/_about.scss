@@ -20,11 +20,13 @@
     padding: $general-section-padding;
 }
 
-.about__keypoints {
+.about__keypoints,
+.about__reasons {
 	text-align: right;
 }
 
-.about__keypoint {
+.about__keypoint,
+.about__reason {
 	@include font-size(23);
     @include line-height(22);
     margin-bottom: $vertical-rhythm;
