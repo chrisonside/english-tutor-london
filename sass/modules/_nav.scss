@@ -1,6 +1,26 @@
 .nav {
 	background: $colour-black;
 	font-family: $font-title;
+	padding: $vertical-rhythm 0;
+	text-align: center;
+
+	@include media('>=tablet') {
+		text-align: right;
+	}
+}
+
+.nav__item {
+	display: inline-block;
+    padding: 0 10px;
+    @include font-size(15);
+    @include line-height(18);
+
+	@include media('>=tablet') {
+		@include font-size(18);
+    	@include line-height(25);
+    	padding: 0 20px;
+	}
+
 }
 
 .nav__link {

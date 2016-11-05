@@ -139,18 +139,84 @@ img {
 
 .nav {
   background: #000;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 25px 0;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .nav {
+      text-align: right; } }
+
+.nav__item {
+  display: inline-block;
+  padding: 0 10px;
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 18px;
+  line-height: 1.8rem; }
+  @media (min-width: 768px) {
+    .nav__item {
+      font-size: 18px;
+      font-size: 1.8rem;
+      line-height: 25px;
+      line-height: 2.5rem;
+      padding: 0 20px; } }
 
 .nav__link {
   color: #fff; }
 
 .hero {
-  background-image: url("../img/rooftopshot.jpg");
-  background-color: #fff;
+  background-color: #fff; }
+  @media (min-width: 768px) {
+    .hero {
+      background-image: url("../img/rooftopshot.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 600px; } }
+
+.hero__text {
+  padding: 30px 20px;
+  background: #fff; }
+  @media (min-width: 768px) {
+    .hero__text {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50%;
+      padding: 40px 30px 30px;
+      margin: 0 20px; } }
+  @media (min-width: 1024px) {
+    .hero__text {
+      width: 30%;
+      margin: 0 70px; } }
+
+.hero__image {
+  height: 0;
+  padding-bottom: 100%;
+  background-image: url("../img/rooftoop-mobilebg.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-  /* Remove once content added */
-  height: 400px; }
+  background-size: 100% auto; }
+  @media (min-width: 768px) {
+    .hero__image {
+      background-image: none;
+      display: none; } }
+
+.hero__title {
+  font-size: 60px;
+  font-size: 6rem;
+  line-height: 60px;
+  line-height: 6rem;
+  margin-bottom: 10px;
+  color: #000;
+  font-weight: bold; }
+  @media (min-width: 768px) {
+    .hero__title {
+      margin-bottom: 25px; } }
+
+.hero__intro {
+  font-size: 22px;
+  font-size: 2.2rem;
+  line-height: 35px;
+  line-height: 3.5rem; }
 
 .about {
   background-color: #e31d3b;
