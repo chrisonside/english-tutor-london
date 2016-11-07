@@ -6,24 +6,63 @@
 	@include font-size(16);
 	@include line-height(21);
 
-	/* Set up squares */
-	height: 0;
-	padding-bottom: 100%;
-	
-	@include media('>=tablet') {
-		display: inline-block;
-		vertical-align: top;
-		
-		width: 50%;
-		padding-bottom: 50%;
-	}
 
 	&--image {
-		background-color: $colour-black;
-	}
-
-	&--text {
 		background-color: $colour-brightblue;
 	}
 
+	&--text {
+		background-color: $colour-white;
+	}
+
+	@include media('>=tablet') {
+		display: inline-block;
+		vertical-align: top;
+		/* Set up squares */
+		width: 50%;
+		height: 0;
+		padding-bottom: 50%;
+	}
+
+}
+
+.grid__text {
+	padding: 80px;
+}
+
+.grid__title {
+	@include font-size(45);
+    @include line-height(45);
+	margin-bottom: 10px;
+	color: $colour-black;
+	font-weight: $font-weight-bold;
+
+	@include media('>=tablet') {
+		margin-bottom: $vertical-rhythm;
+	}
+}
+
+.grid__intro {
+	@include font-size(23);
+    @include line-height(35);
+	margin-bottom: $vertical-rhythm;
+}
+
+.grid__list {
+	margin-bottom: $vertical-rhythm;
+}
+
+.grid__list-item {
+	@include font-size(20);
+    @include line-height(28);
+    font-weight: $font-weight-normal;
+}
+
+.grid__cta {
+	background: transparent;
+    border: 2px solid $colour-brightblue;
+    color: $colour-brightblue;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    font-size: 25px;
 }

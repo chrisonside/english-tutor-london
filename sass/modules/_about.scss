@@ -4,39 +4,90 @@
 }
 
 .about__brief {
-	display: inline-block;
-	width: 50%;
+	padding: 50px 20px 30px;
 	vertical-align: middle;
     color: $colour-white;
-    padding: $general-section-padding;
+    text-align: left;
+
+	@include media('>=tablet') {
+		display: inline-block;
+		width: 50%;
+	}
 }
 
 .about__bio {
-	display: inline-block;
-	width: 50%;
-	vertical-align: middle;
-	background-color: $colour-white;
-    color: $colour-black;
-    padding: $general-section-padding;
-}
+	padding: 0 20px 40px;
+    color: white;
 
-.about__keypoints,
-.about__reasons {
-	text-align: right;
-}
-
-.about__keypoint,
-.about__reason {
-	@include font-size(23);
-    @include line-height(22);
-    margin-bottom: $vertical-rhythm;
-    font-family: $font-title;
+    @include media('>=tablet') {
+		display: inline-block;
+		width: 50%;
+		vertical-align: middle;
+		background-color: $colour-white;
+	    color: $colour-black;
+	    padding: 40px 20px 20px;
+    }
 }
 
 .about__intro {
-	@include font-size(16);
-    @include line-height(19);
+	@include font-size(18);
+    @include line-height(25);
 	margin-bottom: $vertical-rhythm;
+}
+
+/*.about__keypoints,
+.about__reasons {
+	text-align: right;
+}*/
+
+.about__you {
+	background-image: url('../img/bg-image-lesson--large.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: $general-section-padding;
+}
+
+.about__text {
+	padding: 20px;
+    width: 80%;
+    margin: 40px auto;
+    opacity: 0.85;
+	background-color: $colour-white;
+	
+    @include media('>=tablet') {
+     	width: 60%;
+     	padding: $general-section-padding;
+    	margin: 40px;
+    	opacity: 0.9;
+    }
+	
+	@include media('>=desktop') {
+		width: 40%;
+	}
+}
+
+.about__divider {
+	width: 60%;
+	margin: 0 auto 45px;
+	border: 0;
+    height: 1px;
+    background: #fff;
+
+    @include media('>=tablet') {
+    	display: none;
+    }
+}
+
+.about__keypoint {
+	@include font-size(23);
+    @include line-height(22);
+    margin-bottom: $vertical-rhythm;
+}
+
+.about__reason {
+	@include font-size(18);
+    @include line-height(21);
+    margin-bottom: $vertical-rhythm;
 }
 
 .about__cta {
