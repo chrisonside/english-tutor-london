@@ -43,19 +43,24 @@
 }
 
 .grid__intro {
-	@include font-size(23);
-    @include line-height(35);
+	@include font-size(19);
+    @include line-height(27);
 	margin-bottom: $vertical-rhythm;
 }
 
 .grid__list {
 	margin-bottom: $vertical-rhythm;
+	list-style-type: disc;
+	list-style-position: outside;
+	padding-left: 20px;
+	margin-bottom: 40px;
 }
 
 .grid__list-item {
-	@include font-size(20);
-    @include line-height(28);
+	@include font-size(19);
+    @include line-height(27);
     font-weight: $font-weight-normal;
+    padding-left: 10px;
 }
 
 .grid__cta {
