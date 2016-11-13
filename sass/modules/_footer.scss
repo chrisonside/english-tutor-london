@@ -1,0 +1,39 @@
+.footer {
+	background-color: $colour-black;
+	color: $colour-white;
+	padding: 30px 20px;
+}
+
+.footer__date {
+	@include media('>=tablet') {
+		display: inline-block;
+		vertical-align: top;
+    	width: 33.33333%;
+    	margin-right: -4px;
+	}
+}
+
+.footer__contact {
+	@include media('>=tablet') {
+		display: inline-block;
+		vertical-align: top;
+    	width: 33.33333%;
+    	margin-right: -4px;
+    	text-align: center;
+	}
+}
+
+.footer__slogan {
+	@include media('>=tablet') {
+		display: inline-block;
+		vertical-align: top;
+    	width: 33.33333%;
+    	margin-right: -4px;
+    	text-align: right;
+	}
+}
+
+.footer__mailto {
+	color: $colour-white;
+	text-decoration: none;
+}

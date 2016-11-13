@@ -1,0 +1,78 @@
+.testimonials {
+	position: relative;
+	background-color: $colour-white;
+
+	@include media('>=tablet') {
+		background-image: url('../img/bg-image-shard--large.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 800px;
+	}
+}
+
+.testimonial {
+	border-radius: 50%;
+	background-color: $colour-white;
+	position: absolute;
+
+	width: 300px;
+	height: 300px;
+
+	&--one {
+		top: 450px;
+    	left: 250px;
+    	opacity: 0.85;
+    	/*border: 3px solid $colour-brightblue;*/
+	}
+
+	&--two {
+		top: 20px;
+	    left: 20px;
+	    width: 420px;
+	    height: 420px;
+	    opacity: 0.75;
+	   /* border: 3px solid $colour-pink;*/
+	}
+
+	&--three {
+		top: 70px;
+	    left: 1030px;
+	    width: 350px;
+	    height: 350px;
+	    opacity: 0.75;
+	    /*border: 3px solid $colour-brightblue;*/
+	}
+
+	&--four {
+		top: 450px;
+    	left: 900px;
+    	opacity: 0.85;
+    	/*border: 3px solid $colour-pink;*/
+	}
+}
+
+.testimonial__text {
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 75%;
+    margin: 0 auto;
+}
+
+.testimonial__quote {
+	@include font-size(18);
+    @include line-height(25);
+	padding: 0 15px;
+    margin-bottom: 10px;
+}
+
+.testimonial__source,
+.testimonial__company,
+.testimonial__job {
+	@include font-size(16);
+    @include line-height(20);
+    margin-bottom: 5px;
+    text-align: right;
+    font-weight: bold;
+}
