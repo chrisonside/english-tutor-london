@@ -30,6 +30,6 @@ gulp.task('sass', function(){
 
 gulp.task('default', ['connect', 'sass'], function(){
 	gulp.watch('sass/**/*.scss', ['sass']);
-	gulp.watch(['index.php', 'viewModules/*.php'], browserSync.reload);
+	gulp.watch(['index.html', 'viewModules/*.php'], browserSync.reload);
 	gulp.watch('js/**/*.js', browserSync.reload);
 });
