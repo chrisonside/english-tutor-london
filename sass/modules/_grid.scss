@@ -2,20 +2,20 @@
 	font-size: 0;
 }
 
+.grid__flex-container {
+
+	@include media('>=1300px') {
+		display: flex;
+		flex-direction: row-reverse;
+	}
+}
+
 .grid__item {
 	@include font-size(16);
 	@include line-height(21);
+	background-color: $colour-white;
 
-
-	&--image {
-		background-color: $colour-brightblue;
-	}
-
-	&--text {
-		background-color: $colour-white;
-	}
-
-	@include media('>=tablet') {
+	@include media('>=1300px') {
 		display: inline-block;
 		vertical-align: top;
 		/* Set up squares */
@@ -23,11 +23,22 @@
 		height: 0;
 		padding-bottom: 50%;
 	}
+}
 
+.grid__image {
+	display: block;
 }
 
 .grid__text {
-	padding: 80px;
+	padding: 40px;
+	
+	@include media('>=tablet') {
+		padding: 50px;
+	}
+
+	@include media('>=1350px') {
+		padding: 80px;
+	}
 }
 
 .grid__title {
