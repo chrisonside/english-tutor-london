@@ -23,9 +23,9 @@
 
         <nav class="navigation">
             <ul class="nav">
-                <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
-                <li class="nav__item"><a href="#lessons" class="nav__link">Lessons</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                 <li class="nav__item"><a href="#testimonials" class="nav__link">Testimonials</a></li>
+                <li class="nav__item"><a href="#lessons" class="nav__link">Lessons</a></li>
                 <li class="nav__item"><a href="#form" class="nav__link">Enquire</a></li>
             </ul>
         </nav>
@@ -50,8 +50,6 @@
                     <li class="about__keypoint">&#10004;&nbsp;&nbsp;&nbsp;Digital lesson notes available online</li>
                 </ul>
             </div>
-
-            <hr class="about__divider">
 
             <div class="about__bio">
                 <p class="about__intro">I specialise in <strong>teaching English</strong> speaking, grammar, reading, writing and listening skills to <strong>corporate clients in London</strong>.</p>
@@ -123,7 +121,7 @@
 
         <section id="lessons" class="grid">
             <div class="grid__item grid__item--image">
-                <img src="img/individual-lesson--large.jpg" alt="Will Reidy teaching an individual learner" width="100%" />
+                <img class="grid__image" src="img/individual-lesson--large.jpg" alt="Will Reidy teaching an individual learner" width="100%" />
             </div>
             <div class="grid__item grid__item--text">
                 <div class="grid__text">
@@ -131,7 +129,7 @@
                         1-to-1 training
                     </h3>
                     <p class="grid__intro">
-                        1-to-1 training sessions allow for rapid individual development of a client's spoken and written English. 
+                        1-to-1 training sessions allow for rapid individual development of a client's spoken and written English.
                     </p>
                     <p class="grid__intro">
                         After a detailed needs analysis in lesson one, we learn intensively together in a relaxed, positive environment.
@@ -147,27 +145,29 @@
                         Make an enquiry
                     </button>               
                 </div>
-            </div>
-            <div class="grid__item grid__item--text">
-                <div class="grid__text">
-                    <h3 class="grid__title">
-                        Group training
-                    </h3>
-                    <p class="grid__intro">
-                        I can also provide English tuition services for small groups. Training in a positively charged environment, we work together to achieve our own goals. 
-                    </p>
-                    <ul class="grid__list">
-                        <li class="grid__list-item">Upbeat, supportive environment</li>
-                        <li class="grid__list-item">Each attendee has an equal opportunity to speak in class</li>
-                        <li class="grid__list-item">Pair work to maximise English speaking time</li>
-                    </ul>
-                    <button class="grid__cta">
-                        Make an enquiry
-                    </button>
+            </div>    
+            <div class="grid__flex-container">
+                <div class="grid__item grid__item--image">
+                    <img class="grid__image" src="img/group-lesson--large.jpg" alt="A group lesson in progress" width="100%" />
                 </div>
-            </div>
-            <div class="grid__item grid__item--image">
-                <img src="img/group-lesson--large.jpg" alt="Will Reidy teaching a group lesson" width="100%" />
+                <div class="grid__item grid__item--text">
+                    <div class="grid__text">
+                        <h3 class="grid__title">
+                            Group training
+                        </h3>
+                        <p class="grid__intro">
+                            I can also provide English tuition services for small groups. Training in a positively charged environment, we work together to achieve our own goals. 
+                        </p>
+                        <ul class="grid__list">
+                            <li class="grid__list-item">Upbeat, supportive environment</li>
+                            <li class="grid__list-item">Each attendee has an equal opportunity to speak in class</li>
+                            <li class="grid__list-item">Pair work to maximise English speaking time</li>
+                        </ul>
+                        <button class="grid__cta">
+                            Make an enquiry
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -175,30 +175,34 @@
             <!-- Need to insert action -->
             <form class="form" id="enquiryform" action="test" method="POST">
                 <h2 class="form__title">Make an enquiry&hellip;</h2>
-                <p class="form__intro">Please fill in your details and I'll be in touch within 48 hours.</p>
+                <p class="form__intro">Please fill in your details and I will be in touch within 48 hours.</p>
                 <div class="form__fields">
                     <div class="form__field">
-                        <input id="fullname" class="form__input" name="fullname" type="text" value="" placeholder="Your name" />
+                        <label class="form__label" for="fullname">Your name&#42;</label>
+                        <input id="fullname" class="form__input" name="fullname" type="text" />
                         <!-- {{ svg.use('icn_name', 'line-icon size22 competition-form__input__icon') }} -->
                         <div id="fullNameError" class="form__error-message">Please enter your name</div>
                     </div>
                     <div class="form__field">
-                        <input id="email" class="form__input js-email-input" name="email" type="email" value="" placeholder="Email Address" />
+                        <label class="form__label" for="email">Email address&#42;</label>
+                        <input id="email" class="form__input js-email-input" name="email" type="email" />
                         <!-- {{ svg.use('icn_email', 'line-icon size22 competition-form__input__icon') }} -->
                         <div id="emailAddressError" class="form__error-message">Please enter a valid email address</div>
                     </div>
                     <div class="form__field">
-                        <input id="mobile" class="form__input" name="phone" type="text" value="" placeholder="Mobile" />
+                        <label class="form__label" for="mobile">Phone number</label>
+                        <input id="mobile" class="form__input" name="phone" type="text" />
                         <!-- {{ svg.use('icn-phone', 'line-icon size22 competition-form__input__icon') }} -->
                         <div id="mobileError" class="form__error-message">Please enter a valid phone number</div>
                     </div>
                     <div class="form__field">
-                        <input id="companyname" class="form__input" name="companyname" type="text" value="" placeholder="Company name (if applicable)" />
+                        <label class="form__label" for="companyname">Company name</label>
+                        <input id="companyname" class="form__input" name="companyname" type="text" />
                         <!-- {{ svg.use('icn_name', 'line-icon size22 competition-form__input__icon') }} -->
                     </div>
                 </div>
-                <p class="form__comments">Please enter additional information here</p>
-                <textarea class="form__comment" name="comment" form="enquiryform" placeholder="Enter your additional notes here">Enter text here&hellip;</textarea>
+                <p class="form__comments">Additional comments</p>
+                <textarea class="form__comment" name="comment" form="enquiryform"></textarea>
                 <div class="form__submit">
                     <button id="submit" name="submit" type="submit" class="form__button form__button--submit js-track" data-label="form-submit-button">Submit</button>
                 </div>
