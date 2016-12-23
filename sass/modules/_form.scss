@@ -1,54 +1,104 @@
 #form {
-    background-color: #e31d3b;
+    background-color: $colour-brightblue;
     padding: 40px;
+
+    @include media('>=430px') {
+        background-image: url('../img/bg-form--large.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    @include media('>=tablet') {
+        padding: 80px;
+    }
 }
 
 .form {
-    background-color: $colour-white;
-    padding: 40px;
     font-size: 0;
-        @include media('>=tablet') {
-            width: 60%;
+    opacity: 0.9;
+    color: $colour-white;
+        @include media('>=430px') {
             margin: 0 auto;
+            background-color: $colour-white;
+            color: $colour-black;
+            border-radius: 10px;
+            padding: 40px;
+        }
+
+        @include media('>=900px') {
+            width: 80%;
+        }
+
+        @include media('>=desktop') {
+            width: 60%;
         }
 }
-
 
 .form__title {
     @include font-size(25);
     @include line-height(33);
-    color: $colour-black;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: $font-weight-bold;
+
+    @include media('>=430px') {
+        width: 80%;
+        margin: 0 auto 10px;
+    }
 }
 
 .form__intro {
     @include font-size(18);
     @include line-height(25);
-    color: $colour-black;
-    margin-bottom: $vertical-rhythm;
+    margin-bottom: 40px;
+    text-align: center;
+
+    @include media('>=430px') {
+        width: 80%;
+        margin: 0 auto 40px;
+    }
 }
 
-.form__fields {
+.form__field {
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.form__label {
+    @include font-size(18);
+    @include line-height(30);
     display: block;
 
-    @include media('>=tablet') {
-        display: inline-block;
-        vertical-align: top;
-        width: 50%;
+    @include media('>=430px') {
+        width: 80%;
+        margin: 0 auto;
     }
 }
 
 /* To do - check opera mini fallback */
 .form__input {
-    width: 80%;
+    display: block;
+    width: 100%;
     @include font-size(18);
-    @include line-height(25);
+    @include line-height(30);
+
+    @include media('>=430px') {
+        width: 80%;
+        margin: 0 auto;
+    }
 }
 
 .form__error-message {
+    position: absolute;
     color: red;
-    @include font-size(18);
-    @include line-height(25);
+    @include font-size(16);
+    @include line-height(21);
     opacity: 0;
+    top: -20px;
+
+    @include media('>=430px') {
+        padding-left: 10%;
+    }
 }
 
 .form__options {
@@ -60,24 +110,47 @@
 .form__comments {
     @include font-size(18);
     @include line-height(25);
+
+    @include media('>=430px') {
+        width: 80%;
+        margin: 0 auto;
+    }
 }
 
 .form__comment {
     width: 100%;
     height: 100px;
+    margin-bottom: $vertical-rhythm;
+
+    @include media('>=430px') {
+        display: block;
+        width: 80%;
+        margin: 0 auto 40px;
+    }
 }
 
 .form__submit {
     text-align: right;
+    @include media('>=430px') {
+        padding-right: 10%;
+    }
 }
 
 .form__button {
-    background-color: green;
+    display: inline-block;
+    background-color: $colour-brightblue;
     color: white;
     border-radius: 3px;
-    border: 2px solid green;
-    padding: 5px 10px;
+    border: 2px solid $colour-brightblue;
+    padding: 10px 25px;
+    margin-bottom: $vertical-rhythm;
     @include font-size(18);
     @include line-height(25);
     cursor: pointer;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+        color: $colour-brightblue;
+        background-color: $colour-white;
+    }
 }

@@ -4,9 +4,10 @@
 }
 
 .about__brief {
-	padding: 70px 20px 40px;
+	background-color: $colour-pink;
+	color: $colour-white;
+	padding: 40px 40px 15px;
 	vertical-align: middle;
-    color: $colour-white;
     text-align: left;
 
 	@include media('>=tablet') {
@@ -16,16 +17,15 @@
 }
 
 .about__bio {
-	padding: 0 20px 40px;
-    color: white;
+	background-color: $colour-white;
+	padding: 40px 40px 15px;
+    color: $colour-black;
 
     @include media('>=tablet') {
 		display: inline-block;
 		width: 50%;
 		vertical-align: middle;
-		background-color: $colour-white;
-	    color: $colour-black;
-	    padding: 60px 20px 35px;
+	    padding: 80px 40px 55px;
     }
 }
 
@@ -66,22 +66,15 @@
     }
 }
 
-.about__divider {
-	width: 60%;
-	margin: 0 auto 55px;
-	border: 0;
-    height: 1px;
-    background: #fff;
-	
-    @include media('>=tablet') {
-    	display: none;
-    }
-}
-
 .about__keypoint {
-	@include font-size(23);
-    @include line-height(22);
+	@include font-size(20);
+    @include line-height(27);
     margin-bottom: $vertical-rhythm;
+
+    @include media('>=tablet') {
+    	@include font-size(23);
+    	@include line-height(22);
+    }
 }
 
 .about__reason {
