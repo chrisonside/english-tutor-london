@@ -75,10 +75,20 @@
 }
 
 .grid__cta {
+	display: inline-block;
 	background: transparent;
     border: 2px solid $colour-brightblue;
     color: $colour-brightblue;
-    padding: 10px 20px;
-    margin-bottom: 20px;
+    padding: 15px 25px;
+    margin-bottom: $vertical-rhythm;
     font-size: 25px;
+    border-radius: 3px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+    	color: $colour-white;
+    	background-color: $colour-brightblue;
+    }
 }
