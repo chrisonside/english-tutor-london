@@ -8,6 +8,7 @@
 		background-image: url('../img/bg-image-shard--large.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
+		background-position: 50% 50%;
 	}
 
 	@include media('>=900px') {
@@ -33,6 +34,11 @@
 			padding-right: 5px;
 		}
 	}
+
+	/*&--isvisible {
+		transform: none;
+		animation: come-in 0.8s ease forwards;
+	}*/
 
 	@include media('>=tablet') {
 		width: 370px;
@@ -90,6 +96,10 @@
 		}
 	}
 }
+
+/*@keyframes come-in {
+  to { transform: scale(10,10); }
+}*/
 
 .testimonial__text {
 	position: relative;
