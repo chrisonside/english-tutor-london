@@ -4,7 +4,7 @@
 
 .grid__flex-container {
 
-	@include media('>=1300px') {
+	@include media('>=1000px') {
 		display: flex;
 		flex-direction: row-reverse;
 	}
@@ -15,7 +15,7 @@
 	@include line-height(21);
 	background-color: $colour-white;
 
-	@include media('>=1300px') {
+	@include media('>=1000px') {
 		display: inline-block;
 		vertical-align: top;
 		/* Set up squares */
@@ -51,12 +51,28 @@
 	@include media('>=tablet') {
 		margin-bottom: $vertical-rhythm;
 	}
+
+	@include media('>=1000px', '<1150px') {
+		@include font-size(35);
+    	@include line-height(35);
+	}
 }
 
 .grid__intro {
 	@include font-size(19);
     @include line-height(27);
 	margin-bottom: $vertical-rhythm;
+
+	@include media('>=1000px', '<1150px') {
+		@include font-size(17);
+    	@include line-height(22);
+	}
+
+	&--extra {
+		@include media('>=1000px', '<1150px') {
+			display: none;
+		}
+	}
 }
 
 .grid__list {
@@ -72,6 +88,11 @@
     @include line-height(27);
     font-weight: $font-weight-normal;
     padding-left: 10px;
+
+    @include media('>=1000px', '<1150px') {
+		@include font-size(17);
+    	@include line-height(22);
+	}
 }
 
 .grid__cta {
@@ -81,7 +102,7 @@
     color: $colour-brightblue;
     padding: 15px 25px;
     margin-bottom: $vertical-rhythm;
-    font-size: 25px;
+    @include font-size(25);
     border-radius: 3px;
     text-decoration: none;
     cursor: pointer;
@@ -91,4 +112,8 @@
     	color: $colour-white;
     	background-color: $colour-brightblue;
     }
+
+    @include media('>=1000px', '<1150px') {
+		@include font-size(21);
+	}
 }
