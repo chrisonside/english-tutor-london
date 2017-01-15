@@ -138,8 +138,6 @@
 
 .form__button {
     display: inline-block;
-    background-color: $colour-brightblue;
-    color: white;
     border-radius: 3px;
     border: 2px solid $colour-brightblue;
     padding: 10px 25px;
@@ -148,9 +146,25 @@
     @include line-height(25);
     cursor: pointer;
     transition: all 0.3s ease-in;
+    background-color: $colour-white;
+    color: $colour-brightblue;
 
     &:hover {
-        color: $colour-brightblue;
-        background-color: $colour-white;
+        color: $colour-white;
+        background-color: $colour-brightblue;
+        border: 2px solid $colour-white;
     }
+
+    @include media('>=430px') {
+        background-color: $colour-brightblue;
+        color: $colour-white;
+
+        &:hover {
+            color: $colour-brightblue;
+            background-color: $colour-white;
+            border: 2px solid $colour-brightblue;
+        }
+    }
+
+
 }
