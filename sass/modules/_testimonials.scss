@@ -1,6 +1,6 @@
 .testimonials {
 	position: relative;
-	background-color: $colour-brightblue;
+	background-color: $colour-navy;
 	padding: 40px 10px 15px;
 
 	@include media('>=400px') {
@@ -18,12 +18,14 @@
 }
 
 .testimonial {
+	border: 2px solid $colour-white;
 	border-radius: 50%;
 	width: 300px;
 	height: 300px;
 	background-color: $colour-white;
 	opacity: 0.85;
 	margin: 0 auto 50px;
+	transition: border 0.3s ease-in;
 
 	&--two {
 		display: none;
@@ -43,6 +45,11 @@
 	@include media('>=tablet') {
 		width: 370px;
 		height: 370px;
+
+		&:hover {
+			cursor: pointer;
+			border: 2px solid $colour-navy;
+		}
 	}
 	
 	@include media('>=900px') {
@@ -54,7 +61,6 @@
 		&--one {
 			top: 540px;
     		left: 5%;
-	    	/*border: 3px solid $colour-brightblue;*/
 		}
 
 		&--two {
@@ -63,7 +69,6 @@
 		    left: 5%;
 		    width: 420px;
 		    height: 420px;
-		   /* border: 3px solid $colour-pink;*/
 		}
 
 		&--three {
@@ -71,7 +76,6 @@
     		height: 350px;
     		top: 80px;
     		right: 5%;
-		    /*border: 3px solid $colour-brightblue;*/
 		}
 
 		&--four {
@@ -83,12 +87,10 @@
 	@include media('>=desktop') {
 		&--one {
 	    	left: 10%;
-	    	/*border: 3px solid $colour-brightblue;*/
 		}
 
 		&--three {
 			top: 70px;
-		    /*border: 3px solid $colour-brightblue;*/
 		}
 
 		&--four {
