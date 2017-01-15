@@ -69,12 +69,26 @@
 .about__keypoint {
 	@include font-size(20);
     @include line-height(27);
-    margin-bottom: $vertical-rhythm;
+    margin-bottom: 30px;
 
     @include media('>=tablet') {
     	@include font-size(23);
-    	@include line-height(22);
+    	@include line-height(27);
     }
+}
+
+.about__bullet {
+	display: inline-block;
+	vertical-align: middle;
+	width: 20px;
+	margin-right: 10px;
+	font-size: 20px;
+}
+
+.about__bullet-text {
+	display: inline-block;
+	vertical-align: middle;
+	width: calc(100% - 40px);
 }
 
 .about__reason {

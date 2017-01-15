@@ -2,10 +2,15 @@
 	background-color: $colour-white;
 
 	@include media('>=tablet') {
-		background-image: url('../img/rooftopshot.jpg');
+		background-image: url('../img/rooftop--desktopbg.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
+		background-position-x: right;
 		height: 600px;
+	}
+
+	@include media('>=desktop') {
+		height: 700px;
 	}
 }
 
@@ -24,6 +29,11 @@
 	   	width: 50%;
 	    padding: 40px 40px 30px;
 	    margin: 0 20px;
+	    opacity: 0.85;
+	}
+
+	@include media('>=1000px') {
+		 opacity: 0.95;
 	}
 
 	@include media('>=desktop') {
@@ -47,11 +57,33 @@
 }
 
 .hero__title {
-	@include font-size(60);
-    @include line-height(60);
+	@include font-size(50);
+    @include line-height(50);
 	margin-bottom: 10px;
 	color: $colour-black;
 	font-weight: bold;
+
+	@include media('>=400px') {
+		@include font-size(60);
+    	@include line-height(60);
+	}
+
+	@include media('>=tablet') {
+		margin-bottom: 25px;
+	}
+}
+
+.hero__sub {
+	@include font-size(30);
+    @include line-height(30);
+	margin-bottom: 10px;
+	color: $colour-navy;
+	font-weight: bold;
+
+	@include media('>=400px') {
+		@include font-size(40);
+    	@include line-height(40);
+	}
 
 	@include media('>=tablet') {
 		margin-bottom: 25px;

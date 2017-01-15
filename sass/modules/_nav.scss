@@ -11,19 +11,28 @@
 
 .nav__item {
 	display: inline-block;
-    padding: 0 7px;
+    padding: 0 5px;
     @include font-size(15);
-    @include line-height(18);
+    @include line-height(19);
 
 	@include media('>=400px') {
+		@include font-size(15);
+    	@include line-height(19);
+    	padding: 0 20px;
+	}
+	@include media('>=tablet') {
 		@include font-size(18);
     	@include line-height(25);
-    	padding: 0 20px;
 	}
 
 }
 
 .nav__link {
 	color: $colour-white;
+	text-decoration: none;
+	transition: all 0.2s ease-in;
+	&:hover {
+		text-decoration: underline;
+	}
 }
 

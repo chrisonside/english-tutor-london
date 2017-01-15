@@ -1,12 +1,11 @@
 .footer {
 	background-color: $colour-black;
 	color: $colour-white;
-	border-top: 2px solid $colour-brightblue;
 	padding: 30px 20px;
 }
 
 .footer__date {
-	@include media('>=tablet') {
+	@include media('>=1000px') {
 		display: inline-block;
 		vertical-align: top;
     	width: 33.33333%;
@@ -15,7 +14,7 @@
 }
 
 .footer__contact {
-	@include media('>=tablet') {
+	@include media('>=1000px') {
 		display: inline-block;
 		vertical-align: top;
     	width: 33.33333%;
@@ -25,7 +24,8 @@
 }
 
 .footer__slogan {
-	@include media('>=tablet') {
+	color: $colour-brightblue;
+	@include media('>=1000px') {
 		display: inline-block;
 		vertical-align: top;
     	width: 33.33333%;
