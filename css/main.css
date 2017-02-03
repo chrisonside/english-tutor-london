@@ -552,7 +552,13 @@ img {
 .grid {
   font-size: 0; }
 
+<<<<<<< Updated upstream
 @media (min-width: 1000px) {
+||||||| merged common ancestors
+@media (min-width: 1300px) {
+=======
+@media (min-width: 1200px) {
+>>>>>>> Stashed changes
   .grid__flex-container {
     display: flex;
     flex-direction: row-reverse; } }
@@ -563,7 +569,13 @@ img {
   line-height: 21px;
   line-height: 2.1rem;
   background-color: #fff; }
+<<<<<<< Updated upstream
   @media (min-width: 1000px) {
+||||||| merged common ancestors
+  @media (min-width: 1300px) {
+=======
+  @media (min-width: 1200px) {
+>>>>>>> Stashed changes
     .grid__item {
       display: inline-block;
       vertical-align: top;
