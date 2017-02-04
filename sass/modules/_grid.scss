@@ -3,7 +3,7 @@
 }
 
 .grid__flex-container {
-	@include media('>=1200px') {
+	@include media('>=1000px') {
 		display: flex;
 		flex-direction: row-reverse;
 	}
@@ -15,7 +15,7 @@
 	background-color: $colour-white;
 
 
-	@include media('>=1200px') {
+	@include media('>=1000px') {
 		display: inline-block;
 		vertical-align: top;
 		/* Set up squares */

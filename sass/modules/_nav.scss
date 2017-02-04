@@ -20,7 +20,7 @@
     	@include line-height(19);
     	padding: 0 20px;
 	}
-	@include media('>=tablet') {
+	@include media('>=500px') {
 		@include font-size(18);
     	@include line-height(25);
 	}
@@ -30,9 +30,10 @@
 .nav__link {
 	color: $colour-white;
 	text-decoration: none;
-	transition: all 0.2s ease-in;
+	border-bottom: 2px solid $colour-black;
+	transition: border-bottom 0.3s ease-in;
 	&:hover {
-		text-decoration: underline;
+		border-bottom: 2px solid $colour-white;
 	}
 }
 
