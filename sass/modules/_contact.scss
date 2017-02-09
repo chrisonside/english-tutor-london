@@ -1,6 +1,6 @@
 .contact {
     background-color: $colour-brightblue;
-    padding: 40px;
+    padding: 60px 20px;
 
     @include media('>=430px') {
         background-image: url('../img/bg-form--large.jpg');
@@ -8,9 +8,17 @@
         background-size: cover;
     }
 
+    @include media('>=500px') {
+        padding: 40px;
+    }
+
     @include media('>=tablet') {
         padding: 135px 80px;
     }
+
+    @include media('>=1500px') {
+        padding: 200px 80px;
+    }    
 }
 
 .contact__wrapper {
@@ -19,19 +27,24 @@
     text-align: center;
         @include media('>=430px') {
             margin: 0 auto;
+            padding: 40px 40px 50px;
             background-color: $colour-white;
             color: $colour-black;
             border-radius: 10px;
-            padding: 60px 40px;
         }
 
-        @include media('>=900px') {
-            width: 80%;
+        @include media('>=600px') {
+            padding: 50px 20px 60px;
+            max-width: 550px;
         }
 
-        @include media('>=desktop') {
-            width: 60%;
+        @include media('>=tablet') {
+            max-width: 550px;
         }
+
+        // @include media('>=desktop') {
+        //     width: 60%;
+        // }
 }
 
 .contact__header {
@@ -48,7 +61,7 @@
     margin-bottom: 20px;
     text-align: center;
 
-    @include media('>=430px') {
+    @include media('>=600px') {
         width: 80%;
         margin: 0 auto 20px;
     }
@@ -79,23 +92,18 @@
     }
 }
 
-.icn__email {
-    display: inline-block;
-    vertical-align: middle;
-    width: 50px;
-    height: 45px;
-    margin-right: 20px;
-    fill: $colour-white;
-    stroke: $colour-black;
-}
-
-
+.icn__email,
 .icn__phone {
-    display: inline-block;
+    display: block;
     vertical-align: middle;
     width: 50px;
     height: 45px;
-    margin-right: 20px;
+    margin: 0 auto 5px;
     fill: $colour-white;
     stroke: $colour-black;
+
+    @include media('>=370px') {
+        display: inline-block;
+        margin: 0 20px 0 0;
+    }   
 }

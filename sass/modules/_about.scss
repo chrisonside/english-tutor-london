@@ -6,9 +6,13 @@
 .about__brief {
 	background-color: $colour-navy;
 	color: $colour-white;
-	padding: 40px 40px 15px;
+	padding: 40px 20px 15px;
 	vertical-align: middle;
     text-align: left;
+
+    @include media('>=500px') {
+        padding: 40px 40px 15px;
+    }
 
 	@include media('>=tablet') {
 		display: inline-block;
@@ -18,8 +22,12 @@
 
 .about__bio {
 	background-color: $colour-white;
-	padding: 40px 40px 15px;
+	padding: 40px 30px 15px;
     color: $colour-black;
+
+    @include media('>=400px') {
+    	padding: 40px 40px 15px;
+    }
 
     @include media('>=tablet') {
 		display: inline-block;
@@ -67,9 +75,14 @@
 }
 
 .about__keypoint {
-	@include font-size(20);
-    @include line-height(27);
+	@include font-size(18);
+    @include line-height(24);
     margin-bottom: 30px;
+
+    @include media('>=400px') {
+    	@include font-size(20);
+    	@include line-height(27);
+    }
 
     @include media('>=tablet') {
     	@include font-size(23);
@@ -81,8 +94,13 @@
 	display: inline-block;
 	vertical-align: middle;
 	width: 20px;
-	margin-right: 10px;
-	font-size: 20px;
+	margin-right: 5px;
+	@include font-size(16);
+
+	@include media('>=400px') {
+		margin-right: 10px;
+		@include font-size(20);
+	}
 }
 
 .about__bullet-text {

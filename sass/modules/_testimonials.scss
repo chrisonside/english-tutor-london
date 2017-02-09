@@ -3,20 +3,11 @@
 	// background-color: $colour-navy;
 	background-color: $colour-white;
 	// padding: 40px 10px 15px;
-	padding: 80px 0 15px;
+	padding: 40px 0 15px;
 	font-size: 0;
 
 	@include media('>=400px') {
-		// padding: 40px 40px 15px;
-		// background-image: url('../img/bg-image-shard--large.jpg');
-		// background-repeat: no-repeat;
-		// background-size: cover;
-		// background-position: 50% 50%;
-	}
-
-	@include media('>=900px') {
-		/* Setting height as children are all position absolute */
-		// height: 1000px;
+		padding: 80px 0 15px;
 	}
 }
 
@@ -30,14 +21,28 @@
 }
 
 .testimonial {
-	@include font-size(17);
+	@include font-size(16);
 	@include line-height(24);
 	display: inline-block;
 	vertical-align: top;
-	width: 33.333%;
-	padding: 0 40px;
+	// width: 33.333%;
+	padding: 0 20px;
 	margin-bottom: 50px;
 	text-align: center;
+
+
+
+    width: 280px;
+ 
+    white-space: normal;
+
+     @include media(">=desktop") {
+		width: 33.333%;
+		padding: 0 40px;
+		@include font-size(17);
+     }
+    // margin-right: 20px;
+    // @include font-size(28);
 
 	// &--half {
 	// 	width: 50%;
@@ -53,10 +58,15 @@
 }
 
 .testimonial__headline {
-	@include font-size(20);
-	@include line-height(25);
+	@include font-size(18);
+	@include line-height(24);
 	font-weight: $font-weight-bold;
 	margin-bottom: 15px;
+
+	@include media(">=desktop") {
+		@include font-size(20);
+		@include line-height(25);
+	}
 }
 
 .testimonial__flag {
@@ -85,6 +95,51 @@
 
 .testimonial__company {
 	color: $colour-black;
+}
+
+/* Carousel on mobile */
+
+.testimonial__carousel {
+    overflow: hidden;
+    white-space: nowrap;
+
+    @include media(">=desktop") {
+        white-space: normal;
+    }
+}
+
+.testimonial__carousel-slider {
+    // height: 100%;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    font-size: 0;
+    overflow-x: scroll;
+
+    padding-left: 20px;
+
+    @include media(">=desktop") {
+        overflow-x: hidden;
+        padding-left: 0;
+    }
+}
+// Hide unwanted scrollbar
+.testimonial__carousel-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.testimonial__carousel-slider::-moz-scrollbars-none {
+    display: none;
+}
+
+.testimonial__carousel-slider {
+    -ms-overflow-style: none;
+}
+
+.truncate {
+	display: none;
+	@include media(">=desktop") {
+		display: inline;
+	}
 }
 
 // .testimonial {
