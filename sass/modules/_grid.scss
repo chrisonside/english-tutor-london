@@ -3,7 +3,6 @@
 }
 
 .grid__flex-container {
-
 	@include media('>=1000px') {
 		display: flex;
 		flex-direction: row-reverse;
@@ -14,6 +13,7 @@
 	@include font-size(16);
 	@include line-height(21);
 	background-color: $colour-white;
+
 
 	@include media('>=1000px') {
 		display: inline-block;
@@ -30,7 +30,11 @@
 }
 
 .grid__text {
-	padding: 40px;
+	padding: 30px;
+
+	@include media('>=500px') {
+        padding: 40px;
+    }
 	
 	@include media('>=tablet') {
 		padding: 50px;
@@ -102,7 +106,7 @@
     color: $colour-brightblue;
     padding: 15px 25px;
     margin-bottom: $vertical-rhythm;
-    @include font-size(25);
+    @include font-size(22);
     border-radius: 3px;
     text-decoration: none;
     cursor: pointer;
@@ -111,6 +115,10 @@
     &:hover {
     	color: $colour-white;
     	background-color: $colour-brightblue;
+    }
+
+    @include media('>=400px') {
+    	@include font-size(25);
     }
 
     @include media('>=1000px', '<1150px') {

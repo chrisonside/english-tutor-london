@@ -1,5 +1,6 @@
 .hero {
 	background-color: $colour-white;
+	position: relative;
 
 	@include media('>=tablet') {
 		background-image: url('../img/rooftop--desktopbg.jpg');
@@ -10,16 +11,20 @@
 	}
 
 	@include media('>=desktop') {
-		height: 700px;
+		height: calc(100vh - 75px);
+		max-height: 700px;
+	}
+	@include media('>=1500px') {
+		max-height: 900px;
 	}
 }
 
 .hero__text {
-    padding: 40px;
+    padding: 30px;
     background: $colour-white;
-	
-    @include media('>=400px') {
-    	padding: 50px 40px;
+
+    @include media('>=500px') {
+        padding: 50px 40px;
     }
 
 	@include media('>=tablet') {
@@ -27,7 +32,7 @@
 	    top: 50%;
 	    transform: translateY(-50%);
 	   	width: 50%;
-	    padding: 40px 40px 30px;
+	    padding: 40px;
 	    margin: 0 20px;
 	    opacity: 0.85;
 	}
@@ -37,7 +42,7 @@
 	}
 
 	@include media('>=desktop') {
-		width: 40%;
+		width: 42%;
 		margin: 0 70px;
 	}
 }
@@ -76,14 +81,17 @@
 .hero__sub {
 	@include font-size(30);
     @include line-height(30);
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	color: $colour-navy;
 	font-weight: bold;
 
 	@include media('>=400px') {
 		@include font-size(40);
     	@include line-height(40);
+    	margin-bottom: 10px;
 	}
+
+
 
 	@include media('>=tablet') {
 		margin-bottom: 25px;
@@ -91,6 +99,22 @@
 }
 
 .hero__intro {
-	@include font-size(22);
-    @include line-height(35);
+	@include font-size(20);
+    @include line-height(28);
+
+    @include media('>=500px') {
+		@include font-size(22);
+    	@include line-height(35);
+    }
+}
+
+.icn__arrow-down {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	margin-left: -30px;
+	height: 60px;
+	width: 60px;
+	stroke: white;
+	fill: none;
 }
