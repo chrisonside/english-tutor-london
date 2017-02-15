@@ -2,18 +2,25 @@
 	background-color: $colour-black;
 	color: $colour-white;
 	padding: 30px 20px;
+
+	@include media('>=1500px') {
+		@include font-size(22);
+	}
 }
 
 .footer__date {
+	margin-bottom: 2px;
 	@include media('>=1000px') {
 		display: inline-block;
 		vertical-align: top;
     	width: 33.33333%;
     	margin-right: -4px;
+    	padding-left: 15px;
 	}
 }
 
 .footer__contact {
+	margin-bottom: 2px;
 	@include media('>=1000px') {
 		display: inline-block;
 		vertical-align: top;
@@ -24,6 +31,7 @@
 }
 
 .footer__slogan {
+	margin-bottom: 2px;
 	color: $colour-brightblue;
 	@include media('>=1000px') {
 		display: inline-block;
@@ -31,10 +39,6 @@
     	width: 33.33333%;
     	margin-right: -4px;
     	text-align: right;
+    	padding-right: 15px;
 	}
-}
-
-.footer__mailto {
-	color: $colour-white;
-	text-decoration: none;
 }

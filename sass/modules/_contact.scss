@@ -3,7 +3,7 @@
     padding: 60px 20px;
 
     @include media('>=430px') {
-        background-image: url('../img/bg-form--large.jpg');
+        background-image: url('../img/bg__sunset--widescreen.jpg');
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -18,11 +18,15 @@
 
     @include media('>=1500px') {
         padding: 200px 80px;
+    }
+
+    @include media('>=1700px') {
+        padding: 300px 80px;
     }    
 }
 
 .contact__wrapper {
-    opacity: 0.9;
+    opacity: 1;
     color: $colour-white;
     text-align: center;
         @include media('>=430px') {
@@ -31,6 +35,7 @@
             background-color: $colour-white;
             color: $colour-black;
             border-radius: 10px;
+            opacity: 0.9;
         }
 
         @include media('>=600px') {
@@ -42,9 +47,9 @@
             max-width: 550px;
         }
 
-        // @include media('>=desktop') {
-        //     width: 60%;
-        // }
+        @include media('>=1500px') {
+            max-width: 650px;
+        }
 }
 
 .contact__header {
@@ -53,11 +58,17 @@
     text-align: center;
     margin-bottom: 20px;
     font-weight: $font-weight-bold;
+
+    @include media('>=1500px') {
+        @include font-size(50);
+        @include line-height(60);
+        margin-bottom: 25px;
+    }
 }
 
 .contact__intro {
-    @include font-size(19);
-    @include line-height(27);
+    @include font-size(21);
+    @include line-height(28);
     margin-bottom: 20px;
     text-align: center;
 
@@ -68,6 +79,16 @@
 
     &:last-of-type {
         margin-bottom: 30px;
+    }
+
+    @include media('>=1500px') {
+        @include font-size(25);
+        @include line-height(32);
+        margin: 0 auto 30px;
+         
+        &:last-of-type {
+            margin-bottom: 40px;
+        }  
     }
 }
 
@@ -89,6 +110,12 @@
     @include media('>=430px') {
         background-color: $colour-navy;
         color: $colour-white;
+    }
+
+    @include media('>=1500px') {
+        @include font-size(35);
+        @include line-height(45);
+        margin-bottom: 10px;
     }
 }
 
