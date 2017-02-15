@@ -178,14 +178,16 @@ img {
 
 .hero {
   background-color: #fff;
-  position: relative; }
+  position: relative;
+  padding: 15px 0 0; }
   @media (min-width: 768px) {
     .hero {
       background-image: url("../img/bg__hero--desktop.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       background-position-x: right;
-      height: 600px; } }
+      height: 600px;
+      paddding: 0; } }
   @media (min-width: 1024px) {
     .hero {
       height: calc(100vh - 75px);
@@ -201,10 +203,10 @@ img {
 .hero__text {
   padding: 30px 25px;
   background: #fff;
-  border-radius: 5px; }
-  @media (min-width: 500px) {
-    .hero__text {
-      padding: 50px 40px; } }
+  border-radius: 5px;
+  max-width: 500px;
+  margin: 0 auto 20px;
+  text-align: center; }
   @media (min-width: 768px) {
     .hero__text {
       position: relative;
@@ -213,18 +215,18 @@ img {
       width: 50%;
       padding: 40px;
       margin: 0 20px;
-      opacity: 0.85; } }
-  @media (min-width: 1000px) {
-    .hero__text {
-      opacity: 0.95; } }
+      opacity: 0.9;
+      max-width: none;
+      filter: drop-shadow(-2px 0px 3px rgba(0, 0, 0, 0.4)); } }
   @media (min-width: 1024px) {
     .hero__text {
       width: 42%;
-      margin: 0 70px; } }
-  @media (min-width: 1700px) {
+      margin: 0 70px;
+      text-align: left; } }
+  @media (min-width: 1600px) {
     .hero__text {
       width: 38%;
-      margin: 0 100px;
+      margin: 0 100px 0 200px;
       padding: 60px; } }
   @media (min-width: 1800px) {
     .hero__text {
@@ -257,7 +259,7 @@ img {
       line-height: 6rem; } }
   @media (min-width: 768px) {
     .hero__title {
-      margin-bottom: 25px; } }
+      margin-bottom: 20px; } }
   @media (min-width: 1700px) {
     .hero__title {
       font-size: 60px;
@@ -278,11 +280,10 @@ img {
       font-size: 40px;
       font-size: 4rem;
       line-height: 40px;
-      line-height: 4rem;
-      margin-bottom: 10px; } }
+      line-height: 4rem; } }
   @media (min-width: 768px) {
     .hero__sub {
-      margin-bottom: 25px; } }
+      margin-bottom: 20px; } }
   @media (min-width: 1700px) {
     .hero__sub {
       font-size: 40px;
@@ -308,47 +309,83 @@ img {
       line-height: 35px;
       line-height: 3.5rem; } }
 
-.icn__arrow-down {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  margin-left: -30px;
-  height: 60px;
-  width: 60px;
-  stroke: white;
-  fill: none; }
-
 .about {
   background-color: #004A82;
   font-size: 0; }
 
+/* About bullet points section */
 .about__brief {
   background-color: #004A82;
   color: #fff;
-  padding: 40px 25px 15px;
+  padding: 45px 25px 20px;
   vertical-align: middle;
   text-align: left; }
-  @media (min-width: 500px) {
-    .about__brief {
-      padding: 40px 40px 15px; } }
   @media (min-width: 768px) {
+    .about__brief {
+      padding: 70px 25px 45px; } }
+  @media (min-width: 1024px) {
     .about__brief {
       display: inline-block;
-      width: 50%; } }
+      width: 50%;
+      padding: 20px 25px 0; } }
 
+.about__keypoint {
+  font-size: 17px;
+  font-size: 1.7rem;
+  line-height: 22px;
+  line-height: 2.2rem;
+  margin-bottom: 30px; }
+  @media (min-width: 400px) {
+    .about__keypoint {
+      font-size: 20px;
+      font-size: 2rem;
+      line-height: 27px;
+      line-height: 2.7rem; } }
+  @media (min-width: 768px) {
+    .about__keypoint {
+      font-size: 23px;
+      font-size: 2.3rem;
+      line-height: 30px;
+      line-height: 3rem; } }
+  @media (min-width: 1700px) {
+    .about__keypoint {
+      font-size: 24px;
+      font-size: 2.4rem;
+      line-height: 29px;
+      line-height: 2.9rem; } }
+
+.about__bullet {
+  font-size: 20px;
+  font-size: 2rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  height: 30px;
+  width: 23px;
+  stroke: white;
+  fill: none; }
+
+.about__bullet-text {
+  display: inline-block;
+  vertical-align: middle; }
+  @media (min-width: 400px) {
+    .about__bullet-text {
+      width: calc(100% - 40px); } }
+
+/* About bio */
 .about__bio {
   background-color: #fff;
-  padding: 40px 25px 15px;
+  padding: 45px 25px 20px;
   color: #000; }
-  @media (min-width: 400px) {
-    .about__bio {
-      padding: 40px 40px 15px; } }
   @media (min-width: 768px) {
+    .about__bio {
+      padding: 70px 25px 45px; } }
+  @media (min-width: 1024px) {
     .about__bio {
       display: inline-block;
       width: 50%;
       vertical-align: middle;
-      padding: 80px 40px 55px; } }
+      padding: 70px 40px 45px; } }
   @media (min-width: 1700px) {
     .about__bio {
       padding: 100px 40px 75px; } }
@@ -375,91 +412,8 @@ img {
     .about__intro {
       font-size: 23px;
       font-size: 2.3rem;
-      line-height: 29px;
-      line-height: 2.9rem; } }
-
-/*.about__keypoints,
-.about__reasons {
-	text-align: right;
-}*/
-.about__you {
-  background-image: url("../img/bg-image-lesson--large.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 20px; }
-  @media (min-width: 1024px) {
-    .about__you {
-      padding: 80px; } }
-
-.about__text {
-  padding: 20px;
-  width: 80%;
-  margin: 40px auto;
-  opacity: 0.85;
-  background-color: #fff; }
-  @media (min-width: 768px) {
-    .about__text {
-      width: 60%;
-      padding: 20px;
-      margin: 40px;
-      opacity: 0.9; } }
-
-.about__keypoint {
-  font-size: 17px;
-  font-size: 1.7rem;
-  line-height: 22px;
-  line-height: 2.2rem;
-  margin-bottom: 30px; }
-  @media (min-width: 400px) {
-    .about__keypoint {
-      font-size: 20px;
-      font-size: 2rem;
-      line-height: 27px;
-      line-height: 2.7rem; } }
-  @media (min-width: 768px) {
-    .about__keypoint {
-      font-size: 23px;
-      font-size: 2.3rem;
-      line-height: 27px;
-      line-height: 2.7rem; } }
-  @media (min-width: 1700px) {
-    .about__keypoint {
-      font-size: 24px;
-      font-size: 2.4rem;
-      line-height: 29px;
-      line-height: 2.9rem; } }
-
-.about__bullet {
-  font-size: 20px;
-  font-size: 2rem;
-  display: none;
-  vertical-align: middle;
-  margin-right: 10px;
-  height: 30px;
-  width: 23px;
-  stroke: white;
-  fill: none; }
-  @media (min-width: 400px) {
-    .about__bullet {
-      display: inline-block; } }
-
-.about__bullet-text {
-  display: inline-block;
-  vertical-align: middle; }
-  @media (min-width: 400px) {
-    .about__bullet-text {
-      width: calc(100% - 40px); } }
-
-.about__reason {
-  font-size: 18px;
-  font-size: 1.8rem;
-  line-height: 21px;
-  line-height: 2.1rem;
-  margin-bottom: 25px; }
-
-.about__cta {
-  color: #004A82;
-  text-decoration: none; }
+      line-height: 30px;
+      line-height: 3rem; } }
 
 #form {
   background-color: #0076E0;
