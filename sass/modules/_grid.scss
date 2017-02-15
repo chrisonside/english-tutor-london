@@ -43,14 +43,23 @@
 	@include media('>=1350px') {
 		padding: 80px;
 	}
+
+	@include media('>=1700px') {
+		padding: 100px;
+	}
 }
 
 .grid__title {
-	@include font-size(45);
-    @include line-height(45);
-	margin-bottom: 10px;
+	@include font-size(35);
+    @include line-height(35);
+	margin-bottom: 25px;
 	color: $colour-black;
 	font-weight: $font-weight-bold;
+
+	@include media('>=400px') {
+		@include font-size(45);
+    	@include line-height(45);
+	}
 
 	@include media('>=tablet') {
 		margin-bottom: $vertical-rhythm;
@@ -60,12 +69,22 @@
 		@include font-size(35);
     	@include line-height(35);
 	}
+
+	@include media('>=1700px') {
+		@include font-size(50);
+    	@include line-height(60);
+	}
 }
 
 .grid__intro {
-	@include font-size(19);
-    @include line-height(27);
+	@include font-size(17);
+    @include line-height(24);
 	margin-bottom: $vertical-rhythm;
+
+	@include media('>=400px') {
+		@include font-size(19);
+    	@include line-height(27);
+	}
 
 	@include media('>=1000px', '<1150px') {
 		@include font-size(17);
@@ -77,6 +96,11 @@
 			display: none;
 		}
 	}
+
+	@include media('>=1500px') {
+		@include font-size(25);
+    	@include line-height(32);
+	}
 }
 
 .grid__list {
@@ -85,17 +109,32 @@
 	list-style-position: outside;
 	padding-left: 20px;
 	margin-bottom: 40px;
+
+	@include media('>=1500px') {
+		margin-bottom: 60px;
+	}
 }
 
 .grid__list-item {
-	@include font-size(19);
-    @include line-height(27);
+	@include font-size(17);
+    @include line-height(24);
     font-weight: $font-weight-normal;
     padding-left: 10px;
+
+    @include media('>=400px') {
+		@include font-size(19);
+    	@include line-height(27);
+	}
 
     @include media('>=1000px', '<1150px') {
 		@include font-size(17);
     	@include line-height(22);
+	}
+
+	@include media('>=1500px') {
+		@include font-size(25);
+    	@include line-height(32);
+    	margin-bottom: 20px;
 	}
 }
 
@@ -104,9 +143,9 @@
 	background: transparent;
     border: 2px solid $colour-brightblue;
     color: $colour-brightblue;
-    padding: 15px 25px;
+    padding: 10px 20px;
     margin-bottom: $vertical-rhythm;
-    @include font-size(22);
+    @include font-size(20);
     border-radius: 3px;
     text-decoration: none;
     cursor: pointer;
@@ -119,9 +158,15 @@
 
     @include media('>=400px') {
     	@include font-size(25);
+    	padding: 15px 25px;
     }
 
     @include media('>=1000px', '<1150px') {
 		@include font-size(21);
+	}
+
+	@include media('>=1500px') {
+		@include font-size(32);
+		padding: 20px 30px;
 	}
 }
