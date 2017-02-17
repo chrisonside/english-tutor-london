@@ -2,18 +2,23 @@
     background-color: $colour-brightblue;
     padding: 60px 20px;
 
-    @include media('>=430px') {
-        background-image: url('../img/bg__sunset--widescreen.jpg');
+    @include media('>=500px') {
+        background-image: url('../img/background-form--tablet.jpg');
         background-repeat: no-repeat;
         background-size: cover;
-    }
-
-    @include media('>=500px') {
-        padding: 40px;
+        padding: 80px 40px;
     }
 
     @include media('>=tablet') {
         padding: 135px 80px;
+    }
+
+    @include media('>=desktop') {
+        background-image: url('../img/background-form--large.jpg');
+    }
+
+    @include media('>=1300px') {
+        background-image: url('../img/background-form--widescreen.jpg');
     }
 
     @include media('>=1500px') {
@@ -29,13 +34,13 @@
     opacity: 1;
     color: $colour-white;
     text-align: center;
-        @include media('>=430px') {
+        @include media('>=500px') {
             margin: 0 auto;
             padding: 40px 40px 50px;
             background-color: $colour-white;
             color: $colour-black;
             border-radius: 10px;
-            opacity: 0.9;
+            opacity: 0.85;
         }
 
         @include media('>=600px') {
@@ -48,7 +53,7 @@
         }
 
         @include media('>=1500px') {
-            max-width: 650px;
+            max-width: 700px;
         }
 }
 
@@ -69,12 +74,14 @@
 .contact__intro {
     @include font-size(21);
     @include line-height(28);
-    margin-bottom: 20px;
     text-align: center;
+    max-width: 410px;
+    margin: 0 auto 20px;
 
     @include media('>=600px') {
         width: 80%;
         margin: 0 auto 20px;
+        max-width: none;
     }
 
     &:last-of-type {
@@ -82,7 +89,7 @@
     }
 
     @include media('>=1500px') {
-        @include font-size(25);
+        @include font-size(23);
         @include line-height(32);
         margin: 0 auto 30px;
          
@@ -104,10 +111,11 @@
     display: inline-block;
     vertical-align: middle;
     padding: 5px 20px;
+    border-radius: 5px;
     background-color: $colour-white;
     color: $colour-black;
 
-    @include media('>=430px') {
+    @include media('>=500px') {
         background-color: $colour-navy;
         color: $colour-white;
     }

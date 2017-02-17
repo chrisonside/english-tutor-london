@@ -11,7 +11,7 @@
 
 .nav__item {
 	display: inline-block;
-    padding: 0 5px;
+    padding: 0 9px;
     @include font-size(15);
     @include line-height(19);
 
@@ -24,7 +24,10 @@
 		@include font-size(18);
     	@include line-height(25);
 	}
-
+	@include media('>=1500px') {
+		@include font-size(20);
+    	@include line-height(27);
+	}
 }
 
 .nav__link {

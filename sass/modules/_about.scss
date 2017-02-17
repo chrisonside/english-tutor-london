@@ -3,143 +3,108 @@
 	font-size: 0;
 }
 
+/* About bullet points section */
+
 .about__brief {
 	background-color: $colour-navy;
 	color: $colour-white;
-	padding: 40px 25px 15px;
+	padding: 45px 25px 20px;
 	vertical-align: middle;
     text-align: left;
 
-    @include media('>=500px') {
-        padding: 40px 40px 15px;
-    }
-
-	@include media('>=tablet') {
-		display: inline-block;
-		width: 50%;
-	}
-}
-
-.about__bio {
-	background-color: $colour-white;
-	padding: 40px 25px 15px;
-    color: $colour-black;
-
-    @include media('>=400px') {
-    	padding: 40px 40px 15px;
-    }
-
     @include media('>=tablet') {
-		display: inline-block;
-		width: 50%;
-		vertical-align: middle;
-	    padding: 80px 40px 55px;
+        padding: 70px 25px 45px;
     }
-    @include media('>=1700px') {
-    	padding: 100px 40px 75px;
-    }
-}
-
-.about__intro {
-	@include font-size(17);
-    @include line-height(22);
-	margin-bottom: $vertical-rhythm;
-
-	@include media('>=400px') {
-		@include font-size(20);
-    	@include line-height(27);
-	}
-	@include media('>=tablet') {
-    	@include font-size(21);
-    	@include line-height(28);
-    }
-	@include media('>=1700px') {
-		@include font-size(23);
-		@include line-height(29);
-	}
-}
-
-/*.about__keypoints,
-.about__reasons {
-	text-align: right;
-}*/
-
-.about__you {
-	background-image: url('../img/bg-image-lesson--large.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	padding: $general-section-padding;
 
 	@include media('>=desktop') {
-		padding: 80px;
-	}	
-}
-
-.about__text {
-	padding: 20px;
-    width: 80%;
-    margin: 40px auto;
-    opacity: 0.85;
-	background-color: $colour-white;
-	
-    @include media('>=tablet') {
-     	width: 60%;
-     	padding: $general-section-padding;
-    	margin: 40px;
-    	opacity: 0.9;
-    }
+		display: inline-block;
+		width: 50%;
+		padding: 20px 25px 0;
+	}
 }
 
 .about__keypoint {
-	@include font-size(17);
+	@include font-size(16);
     @include line-height(22);
     margin-bottom: 30px;
 
     @include media('>=400px') {
+		@include font-size(18);
+    	@include line-height(24);
+    }
+
+    @include media('>=500px') {
     	@include font-size(20);
     	@include line-height(27);
     }
     @include media('>=tablet') {
-    	@include font-size(23);
-    	@include line-height(27);
-    }
-    @include media('>=1700px') {
-    	@include font-size(24);
+    	@include font-size(22);
     	@include line-height(29);
     }
+	@include media('>=desktop') {
+		@include font-size(20);
+    	@include line-height(27);
+	}
 }
 
 .about__bullet {
 	@include font-size(20);
-	display: none;
+	display: inline-block;
 	vertical-align: middle;
 	margin-right: 10px;
 	height: 30px;
     width: 23px;
 	stroke: white;
     fill: none;
-    
-	@include media('>=400px') {
-		display: inline-block;
-	}
 }
 
 .about__bullet-text {
 	display: inline-block;
 	vertical-align: middle;
+	width: calc(100% - 40px);
+}
+
+/* About bio */
+
+.about__bio {
+	background-color: $colour-white;
+	padding: 45px 25px 20px;
+    color: $colour-black;
+
+    @include media('>=tablet') {
+        padding: 70px 25px 45px;
+    }
+
+    @include media('>=desktop') {
+		display: inline-block;
+		width: 50%;
+		vertical-align: middle;
+	    padding: 70px 40px 45px;
+    }
+    @include media('>=1700px') {
+    	padding: 90px 40px 75px;
+    }
+}
+
+.about__intro {
+	@include font-size(16);
+    @include line-height(22);
+	margin-bottom: $vertical-rhythm;
 
 	@include media('>=400px') {
-		width: calc(100% - 40px);
+		@include font-size(18);
+    	@include line-height(24);
+    }
+    @include media('>=500px') {
+		@include font-size(19);
+    	@include line-height(26);
+    }
+	@include media('>=tablet') {
+		@include font-size(20);
+    	@include line-height(27);
 	}
-}
-
-.about__reason {
-	@include font-size(18);
-    @include line-height(21);
-    margin-bottom: $vertical-rhythm;
-}
-
-.about__cta {
-	color: $colour-navy;
-	text-decoration: none;
+	@include media('>=desktop') {
+		@include font-size(19);
+    	@include line-height(26);
+	}
 }
