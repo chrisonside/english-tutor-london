@@ -24,22 +24,27 @@
 }
 
 .about__keypoint {
-	@include font-size(17);
+	@include font-size(16);
     @include line-height(22);
     margin-bottom: 30px;
 
     @include media('>=400px') {
+		@include font-size(18);
+    	@include line-height(24);
+    }
+
+    @include media('>=500px') {
     	@include font-size(20);
     	@include line-height(27);
     }
     @include media('>=tablet') {
-    	@include font-size(23);
-    	@include line-height(30);
-    }
-    @include media('>=1700px') {
-    	@include font-size(24);
+    	@include font-size(22);
     	@include line-height(29);
     }
+	@include media('>=desktop') {
+		@include font-size(20);
+    	@include line-height(27);
+	}
 }
 
 .about__bullet {
@@ -51,19 +56,12 @@
     width: 23px;
 	stroke: white;
     fill: none;
-    
-	// @include media('>=tablet') {
-	// 	display: inline-block;
-	// }
 }
 
 .about__bullet-text {
 	display: inline-block;
 	vertical-align: middle;
-
-	@include media('>=400px') {
-		width: calc(100% - 40px);
-	}
+	width: calc(100% - 40px);
 }
 
 /* About bio */
@@ -84,25 +82,29 @@
 	    padding: 70px 40px 45px;
     }
     @include media('>=1700px') {
-    	padding: 100px 40px 75px;
+    	padding: 90px 40px 75px;
     }
 }
 
 .about__intro {
-	@include font-size(17);
+	@include font-size(16);
     @include line-height(22);
 	margin-bottom: $vertical-rhythm;
 
 	@include media('>=400px') {
+		@include font-size(18);
+    	@include line-height(24);
+    }
+    @include media('>=500px') {
+		@include font-size(19);
+    	@include line-height(26);
+    }
+	@include media('>=tablet') {
 		@include font-size(20);
     	@include line-height(27);
 	}
-	@include media('>=tablet') {
-    	@include font-size(21);
-    	@include line-height(28);
-    }
-	@include media('>=1700px') {
-		@include font-size(23);
-		@include line-height(30);
+	@include media('>=desktop') {
+		@include font-size(19);
+    	@include line-height(26);
 	}
 }
